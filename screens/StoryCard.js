@@ -53,55 +53,18 @@ export default class StoryCard extends Component {
     this._loadFontsAsync();
   }
 
-  // Renderização do componente
-  render() {
-    // Verifica se as fontes foram carregadas
+  // Renderização do componente ATIVIDADE DO ALUNO
+   render() {
     if (this.state.fontsLoaded) {
-      // Oculta a tela de introdução quando as fontes estão carregadas
       SplashScreen.hideAsync();
       return (
-        // Componente de Visão principal
         <View style={styles.container}>
-          {/* Contêiner do cartão de história */}
-          <View style={styles.cardContainer}>
-            {/* Imagem da história */}
-            <Image
-              source={require("../assets/story_image_1.png")}
-              style={styles.storyImage}
-            ></Image>
-
-            {/* Contêiner do título, autor e descrição da história */}
-            <View style={styles.titleContainer}>
-              {/* Título da história */}
-              <Text style={styles.storyTitleText}>
-                {this.props.story.title}
-              </Text>
-              {/* Autor da história */}
-              <Text style={styles.storyAuthorText}>
-                {this.props.story.author}
-              </Text>
-              {/* Descrição da história */}
-              <Text style={styles.descriptionText}>
-                {this.props.story.description}
-              </Text>
-            </View>
-
-            {/* Contêiner de ação (botão de curtir) */}
-            <View style={styles.actionContainer}>
-              {/* Botão de curtir com ícone de coração */}
-              <View style={styles.likeButton}>
-                <Ionicons name={"heart"} size={RFValue(30)} color={"white"} />
-                {/* Texto indicando a quantidade de curtidas */}
-                <Text style={styles.likeText}>12k</Text>
-              </View>
-            </View>
-          </View>
+          <Text style={{ color: "white" }}>Story Card!</Text>
         </View>
       );
     }
   }
 }
-
 // Estilos utilizando o StyleSheet do React Native
 const styles = StyleSheet.create({
   // Estilo principal da Visão
